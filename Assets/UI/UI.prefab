@@ -718,7 +718,7 @@ PrefabInstance:
     - target: {fileID: 2191393133449298573, guid: 32f13db767321cb419534e81437521da,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2191393133449298573, guid: 32f13db767321cb419534e81437521da,
         type: 3}
@@ -749,6 +749,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730270808542419370, guid: 32f13db767321cb419534e81437521da,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2746898427058951150}
+    - target: {fileID: 2730270808542419370, guid: 32f13db767321cb419534e81437521da,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730270808542419370, guid: 32f13db767321cb419534e81437521da,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2957674653887451479, guid: 32f13db767321cb419534e81437521da,
         type: 3}
@@ -825,6 +840,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5230494505691309455, guid: 32f13db767321cb419534e81437521da,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 258
+      objectReference: {fileID: 0}
     - target: {fileID: 8205523698694037773, guid: 32f13db767321cb419534e81437521da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -879,6 +899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769202526614861545, guid: 32f13db767321cb419534e81437521da,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8809370813019272827, guid: 32f13db767321cb419534e81437521da,
         type: 3}
