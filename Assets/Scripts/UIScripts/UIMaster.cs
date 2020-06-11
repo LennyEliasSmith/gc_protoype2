@@ -15,7 +15,7 @@ public class UIMaster : MonoBehaviour
     public TextMeshProUGUI highscore;
 
     //Pause Menu
-    GameObject pausemenu;
+    private GameObject pausemenu;
     bool isGamePaused = false;
 
 
