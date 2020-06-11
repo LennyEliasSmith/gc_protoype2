@@ -9,6 +9,7 @@ public class CarController : MonoBehaviour
     public List<WheelCollider> throttleWheels;
     public List<WheelCollider> steerWheels;
     public List<GameObject> steerWheelsVis;
+
     public float strengthCoefficient = 2000f;
     public float maxTurn = 30f;
     public float speedMultiplier = 1f;
@@ -24,6 +25,7 @@ public class CarController : MonoBehaviour
         foreach (WheelCollider wheel in throttleWheels)
         {
             wheel.motorTorque = strengthCoefficient * speedMultiplier * Time.deltaTime * manager.throttle;
+
         }
 
         foreach (WheelCollider wheel in steerWheels)
@@ -31,6 +33,24 @@ public class CarController : MonoBehaviour
             wheel.steerAngle = maxTurn * manager.steer;
 
         }
+
+        if(manager.brake > 0)
+        {
+            foreach (WheelCollider wheel in throttleWheels)
+            {
+                wheel.brakeTorque = strengthCoefficient * Time.deltaTime;
+            }
+        } else {
+            foreach (WheelCollider wheel in throttleWheels)
+            {
+                wheel.brakeTorque = 0;
+            }
+        }
+
+
+        
+
+
 
         /* foreach (GameObject wheel in steerWheelsVis)
         {
