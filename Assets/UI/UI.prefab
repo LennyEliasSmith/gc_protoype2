@@ -660,6 +660,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2191393133449298573, guid: 32f13db767321cb419534e81437521da,
+        type: 3}
+      propertyPath: m_TagString
+      value: PauseMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 2304108301993853027, guid: 32f13db767321cb419534e81437521da,
         type: 3}
       propertyPath: m_textInfo.characterCount

@@ -70,4 +70,9 @@ public class UIMaster : MonoBehaviour
         
 
     }
+
+    void QuitGame()
+    {
+        Application.Quit();
+    }
 }
