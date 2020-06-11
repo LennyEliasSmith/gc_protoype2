@@ -15,6 +15,10 @@ public class CarController : MonoBehaviour
     public float speedMultiplier = 1f;
     public float speed;
 
+    public bool speedPickedUp;
+    public float speedTimer;
+    public float speedPickUpLimit;
+
     void Start()
     {
         manager = GetComponent<InputManager>();
@@ -47,10 +51,18 @@ public class CarController : MonoBehaviour
             }
         }
 
-
-        
-
-
+        if(speedPickedUp)
+        {
+            if(speedTimer < speedPickUpLimit)
+            {
+                speedMultiplier = 2f;
+                speedTimer = speedTimer + Time.deltaTime;
+            } else
+            {
+                speedMultiplier = 1f;
+                speedTimer = 0;
+            }
+        }
 
         /* foreach (GameObject wheel in steerWheelsVis)
         {
@@ -59,6 +71,11 @@ public class CarController : MonoBehaviour
             wheel.transform.rotation = wheelRotate;
         } */
 
+    }
+
+    public void speedPickUp()
+    {
+        speedPickedUp = true;
     }
 
 }

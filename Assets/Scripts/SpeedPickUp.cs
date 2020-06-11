@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SpeedPickUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject player;
+    public CarController playerCar;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collision other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player = other.gameObject;
+            playerCar = player.GetComponentInParent<CarController>();
+
+            playerCar.speedPickUp();
+
+            Destroy(this.gameObject);
+        }
     }
 }
