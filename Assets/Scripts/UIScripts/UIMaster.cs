@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIMaster : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class UIMaster : MonoBehaviour
 
     }
 
-
+    //PauseMenu
     void PauseActivate()
     {
 
@@ -71,7 +72,19 @@ public class UIMaster : MonoBehaviour
 
     }
 
-    void QuitGame()
+    //Basic UI Functions
+
+   public void StartGame()
+    {
+
+        SceneManager.LoadScene(1);
+    }
+
+  public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+  public void QuitGame()
     {
         Application.Quit();
     }
